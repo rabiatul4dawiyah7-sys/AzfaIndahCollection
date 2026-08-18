@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book A Slot | Azfa Indah Collection</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                AZFA INDAH COLLECTION
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#services">Services</a>
+                </li>
+
+                <li>
+                    <a href="index.html#about">About</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Booking Section -->
+
+    <section class="booking-section">
+
+        <div class="booking-title">
+
+            <p class="small-title">APPOINTMENT</p>
+
+            <h1>Book A Slot</h1>
+            
+
+            <p>
+                Choose your preferred service, date and time.
+                We will reserve your appointment for you.
+            </p>
+
+        </div>
+
+
+        <div class="booking-container">
+
+
+           <form id="bookingForm" action="save_booking.php" method="POST">
+
+
+                <!-- Name -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- Phone -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="Enter your phone number"
+    inputmode="numeric"
+    pattern="[0-9]{10,11}"
+    maxlength="11"
+    required
+>
+
+                </div>
+
+
+
+                <!-- Service -->
+
+                <div class="form-group">
+
+                    <label for="service">
+                        Type of Service
+                    </label>
+
+                    <select id="service" name="service" required>
+
+                <option value="">
+                    Select a service
+                </option>
+
+                <option value="Baju Kurung">
+                    Baju Kurung
+                </option>
+
+                <option value="Baju Melayu">
+                    Baju Melayu
+                 </option>
+
+                <option value="Baju Kebaya">
+                    Baju Kebaya
+                </option>
+
+                <option value="Jubah">
+                    Jubah
+                </option>
+
+                <option value="Kemeja">
+                    Kemeja
+                </option>
+
+                <option value="Alter">
+                    Alteration
+                </option>
+
+                <option value="Tukar Zip">
+                    Tukar Zip
+                </option>
+
+                <option value="Baju Tunang">
+                    Baju Tunang
+                </option>
+
+                <option value="Langsir">
+                    Langsir
+                </option>
+
+            </select>
+
+                </div>
+
+
+
+                <!-- Date -->
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Preferred Date
+                    </label>
+
+                    <input
+    type="date"
+    id="date"
+    name="booking_date"
+    min=""
+    required
+>
+
+                </div>
+
+
+
+                <!-- Time -->
+
+                <div class="form-group">
+
+                    <label for="time">
+                        Preferred Time
+                    </label>
+
+                    <div class="form-group">
+
+    <label>
+        Available Time Slots
+    </label>
+
+    <div id="timeSlots" class="time-slots">
+
+        <button type="button" class="time-slot" data-time="10:00 AM">
+            10:00 AM
+        </button>
+
+        <button type="button" class="time-slot" data-time="11:00 AM">
+            11:00 AM
+        </button>
+
+        <button type="button" class="time-slot" data-time="12:00 PM">
+            12:00 PM
+        </button>
+
+        <button type="button" class="time-slot" data-time="2:00 PM">
+            2:00 PM
+        </button>
+
+        <button type="button" class="time-slot" data-time="3:00 PM">
+            3:00 PM
+        </button>
+
+        <button type="button" class="time-slot" data-time="4:00 PM">
+            4:00 PM
+        </button>
+
+        <button type="button" class="time-slot" data-time="5:00 PM">
+            5:00 PM
+        </button>
+
+    </div>
+
+    <input type="hidden" id="time" name="booking_time" required>
+
+</div>
+
+                </div>
+
+
+
+                <!-- Notes -->
+
+                <div class="form-group">
+
+                    <label for="notes">
+                        Additional Notes
+                    </label>
+
+                    <textarea
+    id="notes"
+    name="notes"
+    rows="4"
+    placeholder="Tell us anything we should know..."
+></textarea>
+
+                </div>
+
+
+
+                <!-- Submit -->
+
+                <button
+                    type="submit"
+                    class="booking-btn"
+                >
+                    Confirm Booking
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+    </section>
+
+
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>
